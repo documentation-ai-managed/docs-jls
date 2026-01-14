@@ -1,0 +1,117 @@
+---
+title: Introduction to jls
+description: Discover jls, your default documentation space for organizing and managing project documentation efficiently.
+---
+
+## Overview
+
+jls provides a centralized space to create, organize, and manage your project documentation. You build comprehensive guides, API references, and changelogs using familiar Markdown and MDX syntax. Access your docs at `https://docs.example.com` with full search, versioning, and collaboration features.
+
+<Callout kind="info">
+jls integrates seamlessly with your Git workflow, turning repositories into living documentation hubs.
+</Callout>
+
+## Key Features
+
+jls stands out with powerful tools designed for developers and teams.
+
+<Columns cols={3}>
+  <Card title="Markdown & MDX Support" icon="edit-3" href="#markdown-support">
+    Write rich docs using standard Markdown enhanced with interactive MDX components like tabs, steps, and cards.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#versioning">
+    Track changes with Git integration. Publish updates without losing history.
+  </Card>
+  <Card title="Search & Navigation" icon="search" href="#navigation">
+    Full-text search across all docs. Intuitive sidebar and breadcrumbs guide you quickly.
+  </Card>
+  <Card title="Custom Domains" icon="globe" href="#customization">
+    Host on your domain with custom branding and themes.
+  </Card>
+</Columns>
+
+## Why Choose jls
+
+You select jls for its balance of simplicity and power. Unlike static site generators, jls offers live previews, component libraries, and automatic deployments. Teams collaborate in real-time, reducing documentation silos.
+
+<Callout kind="tip">
+Start small with a single page, then scale to full API references and changelogs as your project grows.
+</Callout>
+
+## Quick Start
+
+Get your first document live in minutes.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up at `https://jls.example.com/signup` with your GitHub or email.
+  </Step>
+  <Step title="New Project" icon="plus">
+    Click "New Docs Site" and connect your repository.
+  </Step>
+  <Step title="Add Content" icon="edit">
+    Create `introduction.mdx` in your repo's `docs/` folder.
+  </Step>
+  <Step title="Deploy" icon="rocket">
+    Push changes to trigger automatic build and deployment.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="MDX,Markdown">
+  ```mdx
+  ---
+  title: My First Page
+  description: Hello world!
+  ---
+
+  ## Welcome
+
+  Your content starts here.
+  ```
+  ```markdown
+  # My First Page
+
+  ## Welcome
+
+  Your content starts here.
+  ```
+</CodeGroup>
+
+## Navigation Guide
+
+Explore the docs efficiently using these patterns.
+
+<Tabs>
+  <Tab title="Sidebar" icon="menu">
+    Use the left sidebar for main sections. Expand categories to see pages.
+  </Tab>
+  <Tab title="Search" icon="search">
+    Press `<kbd>Ctrl</kbd>+<kbd>K</kbd>` (or `<kbd>Cmd</kbd>+<kbd>K</kbd>` on macOS) for instant search.
+  </Tab>
+  <Tab title="Breadcrumbs" icon="navigation-2">
+    Top breadcrumbs show your current path. Click to jump levels.
+  </Tab>
+</Tabs>
+
+<Expandable title="Advanced Navigation Tips" default-open="false">
+
+- **Keyboard Shortcuts**: `<kbd>ArrowUp</kbd>` / `<kbd>ArrowDown</kbd>` for previous/next pages.
+- **Table of Contents**: Right sidebar auto-generates from headings.
+
+</Expandable>
+
+## Next Steps
+
+Dive deeper with these guides.
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="zap" href="/quickstart">
+    Set up your first full site.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your docs with API keys.
+  </Card>
+  <Card title="Changelog" icon="git-commit" href="/changelog">
+    Track releases and updates.
+  </Card>
+</Columns>

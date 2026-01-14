@@ -1,0 +1,131 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to the jls platform.
+---
+
+## Recent Updates
+
+Stay informed about new features, improvements, and fixes in jls. You receive notifications for breaking changes and major releases directly in your dashboard.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for documentation pages, allowing multiple users to edit simultaneously.
+- Introduced webhook support for custom integrations with your CI/CD pipelines.
+
+## Improvements
+
+- Enhanced search performance by `>40%` with indexed full-text queries.
+- Updated editor with syntax highlighting for 15+ new languages including Rust and Go.
+
+## Bug Fixes
+
+- Fixed rendering issues with nested Mermaid diagrams.
+- Resolved authentication token refresh loops in long sessions.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Embed live previews of API responses directly in docs using `<Request>` and `<Response>` components.
+- Added version pinning for documentation spaces to lock content at specific releases.
+
+## Bug Fixes
+
+- Patched cross-site scripting vulnerability in user-generated Markdown.
+- Corrected table alignment in responsive views on mobile devices.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## Breaking Changes
+
+- Migrated from legacy auth to OAuth 2.0 flows. Update your integrations to use `https://auth.example.com/oauth/token`.
+
+## New Features
+
+- Core MDX component library with 20+ interactive elements like `<Steps>`, `<Tabs>`, and `<Callout>`.
+- Full-text search across all documentation spaces with filters by tag and date.
+
+## Initial Release
+
+- Project dashboard for managing multiple documentation sites.
+- Git sync for version-controlled content updates.
+
+</Update>
+
+## Upgrade Guide
+
+Follow these steps to upgrade your jls instance to the latest version. Back up your data first.
+
+<Callout kind="alert">
+Always test upgrades in a staging environment before production deployment.
+</Callout>
+
+<Steps>
+  <Step title="Backup Data" icon="database">
+    Export your documentation spaces:
+
+````bash
+jls export --space=all --output=backup-$(date +%Y%m%d).tar.gz
+````
+  </Step>
+  <Step title="Update CLI" icon="download">
+    Install the latest CLI version using your package manager.
+
+<CodeGroup tabs="npm,yarn">
+````bash
+npm install -g @jls/cli@latest
+````
+````bash
+yarn global add @jls/cli@latest
+````
+</CodeGroup>
+  </Step>
+  <Step title="Run Migration" icon="settings">
+    Apply database migrations:
+
+````bash
+jls migrate up --version=1.2.0
+````
+  </Step>
+  <Step title="Verify" icon="check-circle">
+    Restart services and check status:
+
+````bash
+jls status
+jls health-check
+````
+  </Step>
+</Steps>
+
+## Upcoming Changes
+
+Preview what's coming next to plan your integrations.
+
+<Columns cols={2}>
+  <Card title="v1.3.0 (Q4 2024)" icon="zap" horizontal>
+    AI-powered content suggestions and auto-generated diagrams.
+  </Card>
+  <Card title="v2.0.0 (Q1 2025)" icon="rocket" horizontal>
+    Multi-tenant support and enterprise SSO integrations.
+  </Card>
+</Columns>
+
+<Expandable title="Migration Notes for Breaking Changes" default-open="false">
+
+If you encounter issues after upgrading from v0.x:
+
+```bash
+# Reconfigure auth endpoints
+jls config set auth.url https://auth.example.com
+jls config set api.base https://api.example.com/v1
+```
+
+Review full migration guide in your dashboard under Settings > Releases.
+
+</Expandable>

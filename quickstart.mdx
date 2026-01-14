@@ -1,0 +1,131 @@
+---
+title: Getting Started with jls
+description: Quickly set up your jls account and create your first documentation space in under 5 minutes.
+---
+
+## Prerequisites
+
+Before you begin, ensure you have:
+
+- A modern web browser (Chrome, Firefox, or Safari)
+- An email address for account verification
+- Access to `https://dashboard.example.com`
+
+<Callout kind="info">
+
+jls offers a free tier to get started immediately. Upgrade later for advanced features like custom domains and team collaboration.
+
+</Callout>
+
+## Sign Up and Log In
+
+Follow these steps to create your account.
+
+<Steps>
+  <Step title="Visit Dashboard" icon="globe">
+    Open your browser and navigate to `https://dashboard.example.com`.
+  </Step>
+  <Step title="Create Account" icon="user-plus">
+    Click **Sign Up** and enter your email, password, and name. Verify your email via the confirmation link.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Return to the dashboard, enter your credentials, and click **Log In**.
+  </Step>
+</Steps>
+
+## Create a Documentation Space
+
+A documentation space organizes your project docs. Create one now.
+
+<Steps>
+  <Step title="New Space" icon="plus">
+    In the dashboard, click **New Space** in the top-right corner.
+  </Step>
+  <Step title="Configure Space" icon="settings">
+    Enter a name like `My Project Docs`, select visibility (`public` or `private`), and add a description.
+  </Step>
+  <Step title="Publish Space" icon="check-circle">
+    Click **Create**. Your space is now live at `https://docs.example.com/my-project-docs`.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+
+Use descriptive names for spaces. You can create unlimited spaces on the free tier.
+
+</Callout>
+
+## Add Your First Document
+
+Populate your space with content using MDX.
+
+<Steps>
+  <Step title="New Document" icon="file-plus">
+    In your space, click **New Document**.
+  </Step>
+  <Step title="Edit Content" icon="edit-3">
+    Use the editor to add MDX. Here's a complete example:
+  </Step>
+  <Step title="Publish" icon="upload">
+    Click **Publish**. View live at `/introduction`.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="MDX,Preview">
+  ```mdx
+  ---
+  title: Introduction
+  description: Welcome to your docs.
+  ---
+
+  ## Overview
+
+  This is your first document.
+
+  <Callout kind="success">Success!</Callout>
+  ```
+  ```markdown
+  # Introduction (Rendered)
+
+  ## Overview
+
+  This is your first document.
+
+  > **Success!** Your docs are live.
+  ```
+</CodeGroup>
+
+## Basic Interface Tour
+
+Explore the dashboard with these key sections.
+
+<Columns cols={3}>
+  <Card title="Spaces" icon="folder" href="#">
+    Manage all your documentation spaces here.
+  </Card>
+  <Card title="Editor" icon="edit-3" href="#">
+    Write MDX with live preview and syntax highlighting.
+  </Card>
+  <Card title="Settings" icon="settings" href="#">
+    Configure SEO, custom domains, and integrations.
+  </Card>
+</Columns>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your spaces with API keys and webhooks.
+  </Card>
+  <Card title="Advanced MDX" icon="code" href="/introduction">
+    Learn components like Steps and Cards.
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Tips" default-open="false">
+
+- **Login issues?** Check your email verification and browser cookies.
+- **Space not visible?** Ensure it's published and public.
+- Contact support via the help icon.
+
+</Expandable>
